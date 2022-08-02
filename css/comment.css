@@ -272,6 +272,9 @@
   margin-right: 0.5rem;
   background-color: var(--color-grey);
 }
+.v .item .tag.visitor {
+  background-color: var(--color-green);
+}
 .v .item .tag.master {
   background-color: var(--color-orange);
 }
