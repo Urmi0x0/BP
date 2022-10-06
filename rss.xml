@@ -14,12 +14,18 @@
         <lastBuildDate>Thu, 06 Oct 2022 18:49:35 +0800</lastBuildDate>
         <item>
             <guid isPermalink="true">https://urmi0x0.github.io/BP/2022/10/06/study-notes/c-sharp/csharp-002/</guid>
-            <title>ModbusRTU仿真环境搭建</title>
+            <title>C#设置串口初始化</title>
             <link>https://urmi0x0.github.io/BP/2022/10/06/study-notes/c-sharp/csharp-002/</link>
             <category term="学习笔记" scheme="https://urmi0x0.github.io/BP/categories/study-notes/" />
             <category term="C#" scheme="https://urmi0x0.github.io/BP/categories/study-notes/c-sharp/" />
             <pubDate>Thu, 06 Oct 2022 18:49:35 +0800</pubDate>
-            <description><![CDATA[  ]]></description>
+            <description><![CDATA[ &lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;本文仅用于记录本人学习中所遇到的问题和知识加以记录总结，不保证所记录的是最优解，仅作为抛砖引玉，如有不足和纰漏欢迎指正。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;本文所涉及软件资源均来源网络，如有侵权请联系站主。&lt;/p&gt;
+&lt;/div&gt;
+ ]]></description>
         </item>
         <item>
             <guid isPermalink="true">https://urmi0x0.github.io/BP/2022/10/05/study-notes/c-sharp/csharp-001/</guid>
