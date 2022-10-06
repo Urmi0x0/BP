@@ -8,7 +8,16 @@
     <author>
       <name>Urmi</name>
     </author>
-    <updated>2022-10-05T13:05:11.935Z</updated>
+    <updated>2022-10-06T10:49:35.333Z</updated>
+    <entry>
+        <id>https://urmi0x0.github.io/BP/2022/10/06/study-notes/c-sharp/csharp-002/</id>
+        <title>ModbusRTU仿真环境搭建</title>
+        <link rel="alternate" href="https://urmi0x0.github.io/BP/2022/10/06/study-notes/c-sharp/csharp-002/"/>
+        <content type="html"></content>
+        <category term="学习笔记" scheme="https://urmi0x0.github.io/BP/categories/study-notes/" />
+        <category term="C#" scheme="https://urmi0x0.github.io/BP/categories/study-notes/c-sharp/" />
+        <updated>2022-10-06T10:49:35.333Z</updated>
+    </entry>
     <entry>
         <id>https://urmi0x0.github.io/BP/2022/10/05/study-notes/c-sharp/csharp-001/</id>
         <title>ModbusRTU仿真环境搭建</title>
@@ -41,26 +50,30 @@
 &lt;p&gt;解压&lt;span class=&#34;blue&#34;&gt; Modbus Poll 9.2.2 Build 1343.zip&lt;/span&gt;，根据系统选择对应的安装包，运行主程序，并根据安装向导提示安装好软件。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;软件安装成功后，在桌面运行打开软件，进入主界面点击&lt;span class=&#34;green&#34;&gt; Connection&lt;/span&gt;，选择&lt;span class=&#34;green&#34;&gt; Connect and enter key&lt;/span&gt;，弹出软件注册界面。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;打开安装包中的&lt;span class=&#34;blue&#34;&gt; key.text&lt;/span&gt; 文件，将文本内注册码复制到软件注册界面需要填写注册码方框中，然后点击 OK 即可激活软件。&lt;br /&gt;
-&lt;span class=&#34;pink&#34;&gt;key:&lt;/span&gt; &lt;span class=&#34;spoiler&#34; title=&#34;你知道得太多了&#34;&gt;5A5742575C5D391A17627B6C010350&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;软件安装成功后，在桌面运行打开软件，进入主界面点击&lt;span class=&#34;green&#34;&gt; Connection&lt;/span&gt;，选择&lt;span class=&#34;green&#34;&gt; Connect...&lt;/span&gt;，弹出软件注册界面。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBcWVCVDVpaHBLTGxuaFNOUlJ1LXJ0SThrVWs1P2U9U0h6OGRU.jpg&#34; alt=&#34;&#34; title=&#34;软件注册界面&#34; height=&#34;295px&#34; width=&#34;350px&#34; /&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;打开安装包中的&lt;span class=&#34;blue&#34;&gt; key.text&lt;/span&gt; 文件，将文本内注册码复制到软件注册界面需要填写注册码方框中，然后点击 OK 即可激活软件。&lt;br /&gt;
+&lt;span class=&#34;pink&#34;&gt;key:&lt;/span&gt; &lt;span class=&#34;spoiler&#34; title=&#34;你知道得太多了&#34;&gt;5A5742575C5D391A17627B6C010350&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBcWVCVDVpaHBLTGxuaEhLQ3VtZFdWMEstcExHP2U9azJGWmhj.jpg&#34; alt=&#34;&#34; title=&#34;软件注册界面&#34; height=&#34;295px&#34; width=&#34;350px&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;modbus-slave-安装步骤&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#modbus-slave-安装步骤&#34;&gt;#&lt;/a&gt; Modbus Slave 安装步骤&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;解压&lt;span class=&#34;blue&#34;&gt; Modbus Slave 7.3.0.1402 x64.zip&lt;/span&gt;，运行主程序，并根据安装向导提示安装好软件。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;软件安装成功后，在桌面运行打开软件，进入主界面点击&lt;span class=&#34;green&#34;&gt; Connection&lt;/span&gt;，选择&lt;span class=&#34;green&#34;&gt; Connect and enter key&lt;/span&gt;，弹出软件注册界面。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;打开安装包中的&lt;span class=&#34;blue&#34;&gt; key.text&lt;/span&gt; 文件，将文本内注册码复制到软件注册界面需要填写注册码方框中，然后点击 OK 即可激活软件。&lt;br /&gt;
-&lt;span class=&#34;pink&#34;&gt;key:&lt;/span&gt; &lt;span class=&#34;spoiler&#34; title=&#34;你知道得太多了&#34;&gt;54554154514756666A655A187D545E505C454F&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;软件安装成功后，在桌面运行打开软件，进入主界面点击&lt;span class=&#34;green&#34;&gt; Connection&lt;/span&gt;，选择&lt;span class=&#34;green&#34;&gt; Connect...&lt;/span&gt;，弹出软件注册界面。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBcWVCVDVpaHBLTGxuaE9HekVfZGtQYkljSmluP2U9N0tKZkxv.jpg&#34; alt=&#34;&#34; title=&#34;软件注册界面&#34; height=&#34;295px&#34; width=&#34;302px&#34; /&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;打开安装包中的&lt;span class=&#34;blue&#34;&gt; key.text&lt;/span&gt; 文件，将文本内注册码复制到软件注册界面需要填写注册码方框中，然后点击 OK 即可激活软件。&lt;br /&gt;
+&lt;span class=&#34;pink&#34;&gt;key:&lt;/span&gt; &lt;span class=&#34;spoiler&#34; title=&#34;你知道得太多了&#34;&gt;54554154514756666A655A187D545E505C454F&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBcWVCVDVpaHBLTGxuaExMTXMzTzdzZmFtTFRrP2U9ekJTWDBn.jpg&#34; alt=&#34;&#34; title=&#34;软件注册界面&#34; height=&#34;295px&#34; width=&#34;302px&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;virtual-serial-port-driver-安装步骤&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#virtual-serial-port-driver-安装步骤&#34;&gt;#&lt;/a&gt; Virtual Serial Port Driver 安装步骤&lt;/h2&gt;
 &lt;p&gt;本安装包中提供了&lt;span class=&#34;blue&#34;&gt; vspd7.2&lt;/span&gt; 和&lt;span class=&#34;blue&#34;&gt; vspd9.0&lt;/span&gt; 两个版本，本文以&lt;span class=&#34;blue&#34;&gt; vspd9.0&lt;/span&gt; 版本为例子举例。&lt;/p&gt;
 &lt;ol&gt;
