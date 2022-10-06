@@ -25,12 +25,12 @@
 
   
 
-<link rel="canonical" href="https://urmi0x0.github.io/BP/2022/10/05/study-notes/c-sharp/hello-world/">
+<link rel="canonical" href="https://urmi0x0.github.io/BP/2022/10/05/study-notes/c-sharp/csharp-001/">
 
 
 
   <title>
-Hello World - C# - 学习笔记 |
+ModbusRTU仿真环境搭建 - C# - 学习笔记 |
 Urmi0x0 = Urmi = Blog</title>
 <meta name="generator" content="Hexo 6.2.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -58,7 +58,7 @@ Urmi0x0 = Urmi = Blog</title>
         <div id="brand">
           <div class="pjax">
           
-  <h1 itemprop="name headline">Hello World
+  <h1 itemprop="name headline">ModbusRTU仿真环境搭建
   </h1>
   
 <div class="meta">
@@ -74,7 +74,7 @@ Urmi0x0 = Urmi = Blog</title>
       <i class="ic i-pen"></i>
     </span>
     <span class="text">本文字数</span>
-    <span>362</span>
+    <span>1.6k</span>
     <span class="text">字</span>
   </span>
   <span class="item" title="阅读时长">
@@ -115,12 +115,12 @@ Urmi0x0 = Urmi = Blog</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipexoj0moj20zk0m8kgu.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclfdu6exj20zk0m87hw.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giciusoyjnj219g0u0x56.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclhpw3lwj20zk0m8gvw.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giph4fomxoj20zk0m8axp.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclh3brzpj20zk0m8ann.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclflwv2aj20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicitf0kl1j20zk0m87fe.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipeu7txpzj20zk0m81kx.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipevarprfj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipeuv80yoj20zk0m8kjl.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipevo9j1jj20zk0m8e81.jpg"></li>
         </ul>
       </div>
     </header>
@@ -154,7 +154,7 @@ Urmi0x0 = Urmi = Blog</title>
 </div>
 
     <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
-  <link itemprop="mainEntityOfPage" href="https://urmi0x0.github.io/BP/2022/10/05/study-notes/c-sharp/hello-world/">
+  <link itemprop="mainEntityOfPage" href="https://urmi0x0.github.io/BP/2022/10/05/study-notes/c-sharp/csharp-001/">
 
   <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="image" content="/BP/images/Elena01.jpg">
@@ -169,17 +169,44 @@ Urmi0x0 = Urmi = Blog</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <hr />
-<p>Welcome to <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvLw==">Hexo</span>! This is your very first post. Check <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3Mv">documentation</span> for more info. If you get any problems when using Hexo, you can find the answer in <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdHJvdWJsZXNob290aW5nLmh0bWw=">troubleshooting</span> or you can ask me on <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvL2lzc3Vlcw==">GitHub</span>.</p>
-<h2 id="quick-start"><a class="anchor" href="#quick-start">#</a> Quick Start</h2>
-<h3 id="create-a-new-post"><a class="anchor" href="#create-a-new-post">#</a> Create a new post</h3>
-<figure class="highlight bash"><figcaption data-lang="bash"><span>h</span></figcaption><table><tr><td data-num="1"></td><td><pre>$ hexo new <span class="token string">"My New Post"</span></pre></td></tr></table></figure><p>More info: <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvd3JpdGluZy5odG1s">Writing</span></p>
-<h3 id="run-server"><a class="anchor" href="#run-server">#</a> Run server</h3>
-<figure class="highlight bash"><figcaption data-lang="bash"><span>h</span></figcaption><table><tr><td data-num="1"></td><td><pre>$ hexo server</pre></td></tr></table></figure><p>More info: <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvc2VydmVyLmh0bWw=">Server</span></p>
-<h3 id="generate-static-files"><a class="anchor" href="#generate-static-files">#</a> Generate static files</h3>
-<figure class="highlight bash"><figcaption data-lang="bash"><span>h</span></figcaption><table><tr><td data-num="1"></td><td><pre>$ hexo generate</pre></td></tr></table></figure><p>More info: <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvZ2VuZXJhdGluZy5odG1s">Generating</span></p>
-<h3 id="deploy-to-remote-sites"><a class="anchor" href="#deploy-to-remote-sites">#</a> Deploy to remote sites</h3>
-<figure class="highlight bash"><figcaption data-lang="bash"><span>h</span></figcaption><table><tr><td data-num="1"></td><td><pre>$ hexo deploy</pre></td></tr></table></figure><p>More info: <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvb25lLWNvbW1hbmQtZGVwbG95bWVudC5odG1s">Deployment</span></p>
+    <p>:::info<br>本文仅用于记录本人学习中所遇到的问题和知识加以记录总结，不保证所记录的是最优解，仅作为抛砖引玉，如有不足和纰漏欢迎指正。<br>:::</p>
+<p>:::info<br>本文所涉及软件资源均来源网络，如有侵权请联系站主。<br>:::</p>
+<p>ModbusRTU是公开的Modbus通讯协议中的⼀种，⼀般以串⼝作为通讯介质来传输标准格式的报⽂，实现主从站之间的数据交互，⼴泛应⽤于⼯业设备的通信中。<br>ModbusRTU是⼀种⼀对多的通信协议，所有的数据读写请求由主站发送，指定的从站接收到正确的报⽂后，则会被动响应主站的请求，返回对应的响应报⽂。</p>
+<h1 id="仿真环境搭建所需软件"><a href="#仿真环境搭建所需软件" class="headerlink" title="仿真环境搭建所需软件"></a>仿真环境搭建所需软件</h1><p>搭建Modbus仿真环境需要以下软件：</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cubW9kYnVzdG9vbHMuY29tL21vZGJ1c19wb2xsLmh0bWw=">Modbus Poll</span>是一款非常受欢迎的Modbus主站设备仿真器，可用于测试和调试Modbus从站设备。该软件支持Modbus RTU、ASCII、TCP&#x2F;IP等协议模式。</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cubW9kYnVzdG9vbHMuY29tL21vZGJ1c19zbGF2ZS5odG1s">Modbus Slave</span> Modbus从设备仿真器，可以仿真32个从设备&#x2F;地址域。每个接口都提供了对EXCEL报表的OLE自动化支持。</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuZWx0aW1hLmNvbS9jbi9wcm9kdWN0cy92c3BkeHAv">Virtual Serial Port Driver</span>可以在一个电脑上虚拟出两个com端口，并透过虚拟调制解调器电缆成对连接。双方的应用程序将能够以这种方式交换数据，所有写入第一个端口的数据将显示在第二个端口一次又一次。</p>
+<p>下载链接：<span class="exturl" data-url="aHR0cHM6Ly9wYW4uYmFpZHUuY29tL3MvMU5pYlBSV3JzREVDUHM5YjBRWDlRbHc/cHdkPWF1czg=">百度网盘</span></p>
+<h1 id="仿真软件安装步骤"><a href="#仿真软件安装步骤" class="headerlink" title="仿真软件安装步骤"></a>仿真软件安装步骤</h1><p>解压[Modbus调试工具软件套装.rar]{.blue}，其中包括了：<br>{.primary}</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> [Modbus Poll 9.2.2 Build 1343.zip]{.blue}</li>
+<li><input checked="" disabled="" type="checkbox"> [Modbus Slave 7.3.0.1402 x64.zip]{.blue}</li>
+<li><input checked="" disabled="" type="checkbox"> [虚拟串口vspd7.2.308.zip]{.blue}</li>
+<li><input checked="" disabled="" type="checkbox"> [虚拟串口vspdp9.0破解版.zip]{.blue}</li>
+</ul>
+<h2 id="Modbus-Poll-安装步骤"><a href="#Modbus-Poll-安装步骤" class="headerlink" title="Modbus Poll 安装步骤"></a>Modbus Poll 安装步骤</h2><ol>
+<li><p>解压[Modbus Poll 9.2.2 Build 1343.zip]{.blue}，根据系统选择对应的安装包，运行主程序，并根据安装向导提示安装好软件。</p>
+</li>
+<li><p>软件安装成功后，在桌面运行打开软件，进入主界面点击[Connection]{.green}，选择[Connect and enter key]{.green}，弹出软件注册界面。</p>
+</li>
+<li><p>打开安装包中的[key.text]{.blue}文件，将文本内注册码复制到软件注册界面需要填写注册码方框中，然后点击OK即可激活软件。<br>[key:]{.pink} !!5A5742575C5D391A17627B6C010350!!</p>
+</li>
+</ol>
+<h2 id="Modbus-Slave-安装步骤"><a href="#Modbus-Slave-安装步骤" class="headerlink" title="Modbus Slave 安装步骤"></a>Modbus Slave 安装步骤</h2><ol>
+<li><p>解压[Modbus Slave 7.3.0.1402 x64.zip]{.blue}，运行主程序，并根据安装向导提示安装好软件。</p>
+</li>
+<li><p>软件安装成功后，在桌面运行打开软件，进入主界面点击[Connection]{.green}，选择[Connect and enter key]{.green}，弹出软件注册界面。</p>
+</li>
+<li><p>打开安装包中的[key.text]{.blue}文件，将文本内注册码复制到软件注册界面需要填写注册码方框中，然后点击OK即可激活软件。<br>[key:]{.pink} !!54554154514756666A655A187D545E505C454F!!</p>
+</li>
+</ol>
+<h2 id="Virtual-Serial-Port-Driver-安装步骤"><a href="#Virtual-Serial-Port-Driver-安装步骤" class="headerlink" title="Virtual Serial Port Driver 安装步骤"></a>Virtual Serial Port Driver 安装步骤</h2><p>本安装包中提供了[vspd7.2]{.blue}和[vspd9.0]{.blue}两个版本，本文以[vspd9.0]{.blue}版本为例子举例。</p>
+<ol>
+<li><p>解压[虚拟串口vspdp9.0破解版.zip]{.blue}，运行主程序[vspdpro原版.exe]{.blue}，并根据安装向导提示安装好软件。</p>
+</li>
+<li><p>打开文件安装目录，将文件目录中的[vspdpro.exe]{.blue}替换成安装文件包中的[vspdpro.exe]{.blue}。</p>
+</li>
+</ol>
 
   </div>
 
@@ -191,9 +218,9 @@ Urmi0x0 = Urmi = Blog</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2022-10-05 21:21:30" itemprop="dateModified" datetime="2022-10-05T21:21:30+08:00">2022-10-05</time>
+    <time title="修改时间：2022-10-06 18:39:40" itemprop="dateModified" datetime="2022-10-06T18:39:40+08:00">2022-10-06</time>
   </span>
-  <span id="2022/10/05/study-notes/c-sharp/hello-world/" class="item leancloud_visitors" data-flag-title="Hello World" title="阅读次数">
+  <span id="2022/10/05/study-notes/c-sharp/csharp-001/" class="item leancloud_visitors" data-flag-title="ModbusRTU仿真环境搭建" title="阅读次数">
       <span class="icon">
         <i class="ic i-eye"></i>
       </span>
@@ -212,7 +239,7 @@ Urmi0x0 = Urmi = Blog</title>
   </li>
   <li class="link">
     <strong>本文链接：</strong>
-    <a href="https://urmi0x0.github.io/BP/2022/10/05/study-notes/c-sharp/hello-world/" title="Hello World">https://urmi0x0.github.io/BP/2022/10/05/study-notes/c-sharp/hello-world/</a>
+    <a href="https://urmi0x0.github.io/BP/2022/10/05/study-notes/c-sharp/csharp-001/" title="ModbusRTU仿真环境搭建">https://urmi0x0.github.io/BP/2022/10/05/study-notes/c-sharp/csharp-001/</a>
   </li>
   <li class="license">
     <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
@@ -231,7 +258,7 @@ Urmi0x0 = Urmi = Blog</title>
     <div class="item left">
       
 
-  <a href="/BP/2022/10/05/guide/text/hello-world/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclwuom7cj20zk0m8dvn.jpg" title="Hello World">
+  <a href="/BP/2022/10/05/guide/text/hello-world/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giciuv0socj20zk0m8qes.jpg" title="Hello World">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> 测试</span>
   <h3>Hello World</h3>
@@ -255,11 +282,11 @@ Urmi0x0 = Urmi = Blog</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#quick-start"><span class="toc-number">1.</span> <span class="toc-text"> Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text"> Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#run-server"><span class="toc-number">1.2.</span> <span class="toc-text"> Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text"> Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text"> Deploy to remote sites</span></a></li></ol></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%BF%E7%9C%9F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E6%89%80%E9%9C%80%E8%BD%AF%E4%BB%B6"><span class="toc-number">1.</span> <span class="toc-text">仿真环境搭建所需软件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%BF%E7%9C%9F%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4"><span class="toc-number">2.</span> <span class="toc-text">仿真软件安装步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Modbus-Poll-%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4"><span class="toc-number">2.1.</span> <span class="toc-text">Modbus Poll 安装步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Modbus-Slave-%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4"><span class="toc-number">2.2.</span> <span class="toc-text">Modbus Slave 安装步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Virtual-Serial-Port-Driver-%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4"><span class="toc-number">2.3.</span> <span class="toc-text">Virtual Serial Port Driver 安装步骤</span></a></li></ol></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
         <ul>
-          <li class="active"><a href="/BP/2022/10/05/study-notes/c-sharp/hello-world/" rel="bookmark" title="Hello World">Hello World</a></li>
+          <li class="active"><a href="/BP/2022/10/05/study-notes/c-sharp/csharp-001/" rel="bookmark" title="ModbusRTU仿真环境搭建">ModbusRTU仿真环境搭建</a></li>
         </ul>
       </div>
       <div class="overview panel" data-title="站点概览">
@@ -329,24 +356,24 @@ Urmi0x0 = Urmi = Blog</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/BP/categories/study-notes/" title="分类于 学习笔记">学习笔记</a>
-<i class="ic i-angle-right"></i>
-<a href="/BP/categories/study-notes/c-sharp/" title="分类于 C#">C#</a>
-</div>
-
-    <span><a href="/BP/2022/10/05/study-notes/c-sharp/hello-world/" title="Hello World">Hello World</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
 <a href="/BP/categories/guide/" title="分类于 指北">指北</a>
 <i class="ic i-angle-right"></i>
 <a href="/BP/categories/guide/text/" title="分类于 测试">测试</a>
 </div>
 
     <span><a href="/BP/2022/10/05/guide/text/hello-world/" title="Hello World">Hello World</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/BP/categories/study-notes/" title="分类于 学习笔记">学习笔记</a>
+<i class="ic i-angle-right"></i>
+<a href="/BP/categories/study-notes/c-sharp/" title="分类于 C#">C#</a>
+</div>
+
+    <span><a href="/BP/2022/10/05/study-notes/c-sharp/csharp-001/" title="ModbusRTU仿真环境搭建">ModbusRTU仿真环境搭建</a></span>
   </li>
 
   </ul>
@@ -371,13 +398,13 @@ Urmi0x0 = Urmi = Blog</title>
     <span class="post-meta-item-icon">
       <i class="ic i-chart-area"></i>
     </span>
-    <span title="站点总字数">1k 字</span>
+    <span title="站点总字数">2k 字</span>
 
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="ic i-coffee"></i>
     </span>
-    <span title="站点阅读时长">1 分钟</span>
+    <span title="站点阅读时长">2 分钟</span>
   </div>
   <div class="powered-by">
     基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
@@ -389,7 +416,7 @@ Urmi0x0 = Urmi = Blog</title>
   </div>
 <script data-config type="text/javascript">
   var LOCAL = {
-    path: '2022/10/05/study-notes/c-sharp/hello-world/',
+    path: '2022/10/05/study-notes/c-sharp/csharp-001/',
     favicon: {
       show: "Urmi0x0",
       hide: "Blog"
@@ -399,7 +426,7 @@ Urmi0x0 = Urmi = Blog</title>
       empty: "关于 「 ${query} 」，什么也没搜到",
       stats: "${time} ms 内找到 ${hits} 条结果"
     },
-    valine: true,fancybox: true,
+    valine: true,
     copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
     ignores : [
       function(uri) {
