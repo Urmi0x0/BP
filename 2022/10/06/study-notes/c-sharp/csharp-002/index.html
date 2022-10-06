@@ -30,7 +30,7 @@
 
 
   <title>
-C#设置串口初始化 - C# - 学习笔记 |
+使用SerialPort设置串口属性 - C# - 学习笔记 |
 Urmi0x0 = Urmi = Blog</title>
 <meta name="generator" content="Hexo 6.2.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -58,7 +58,7 @@ Urmi0x0 = Urmi = Blog</title>
         <div id="brand">
           <div class="pjax">
           
-  <h1 itemprop="name headline">C#设置串口初始化
+  <h1 itemprop="name headline">使用SerialPort设置串口属性
   </h1>
   
 <div class="meta">
@@ -74,7 +74,7 @@ Urmi0x0 = Urmi = Blog</title>
       <i class="ic i-pen"></i>
     </span>
     <span class="text">本文字数</span>
-    <span>85</span>
+    <span>2.2k</span>
     <span class="text">字</span>
   </span>
   <span class="item" title="阅读时长">
@@ -82,7 +82,7 @@ Urmi0x0 = Urmi = Blog</title>
       <i class="ic i-clock"></i>
     </span>
     <span class="text">阅读时长</span>
-    <span>1 分钟</span>
+    <span>2 分钟</span>
   </span>
 </div>
 
@@ -115,12 +115,12 @@ Urmi0x0 = Urmi = Blog</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicivghyooj20zk0m8dir.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipevgoki5j20zk0m84qp.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giciundwu5j20zk0m8n9e.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipetfk5zwj20zk0m8e81.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclfw2t96j20zk0m8x6p.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giph4baakhj20zk0m8h5q.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giciukx8a7j20zk0m8aio.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeyonbf9j20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeubcbajj20zk0m8h1h.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclxfdlttj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giph4wqtg4j20zk0m8x6p.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giciuja1j1j20zk0m8kjl.jpg"></li>
         </ul>
       </div>
     </header>
@@ -175,7 +175,32 @@ Urmi0x0 = Urmi = Blog</title>
 <div class="note info">
 <p>本文所涉及软件资源均来源网络，如有侵权请联系站主。</p>
 </div>
-
+<p>从  <code>.NET Framework 2.0</code>  开始，微软就默认提供了  <code>System.IO.Ports.SerialPort</code>  类，根据 <code>SerialPort</code>  类提供的简单操作步骤，可以很容易的完成串口的信息收发程序，从特定的串口中接收到数据也可以进行数据的发送。</p>
+<p>参考链接：<span class="exturl" data-url="aHR0cHM6Ly9sZWFybi5taWNyb3NvZnQuY29tL3poLWNuL2RvdG5ldC9hcGkvc3lzdGVtLmlvLnBvcnRzLnNlcmlhbHBvcnQ/dmlldz1kb3RuZXQtcGxhdC1leHQtNi4w">SerialPort</span></p>
+<h1 id="设置串口属性"><a class="anchor" href="#设置串口属性">#</a> 设置串口属性</h1>
+<p>关于 <code>SerialPort</code>  类的应用也很容易，可以根据微软官方的介绍进行使用，以下介绍一些必须初始化设置的内容。</p>
+<h2 id="serialport-串口属性赋值"><a class="anchor" href="#serialport-串口属性赋值">#</a>  <code>SerialPort</code>  串口属性赋值</h2>
+<figure class="highlight csharp"><figcaption data-lang="C#"><span>p 串口初始化</span></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">using</span> <span class="token namespace">System<span class="token punctuation">.</span>IO<span class="token punctuation">.</span>Ports</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="2"></td><td><pre></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token class-name">SerialPort</span> sp <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">SerialPort</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="4"></td><td><pre>sp<span class="token punctuation">.</span>PortName <span class="token operator">=</span> <span class="token string">"COM4"</span><span class="token punctuation">;</span>  </pre></td></tr><tr><td data-num="5"></td><td><pre>sp<span class="token punctuation">.</span>BaudRate <span class="token operator">=</span> <span class="token number">9600</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="6"></td><td><pre>sp<span class="token punctuation">.</span>DataBits <span class="token operator">=</span> <span class="token number">8</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="7"></td><td><pre>sp<span class="token punctuation">.</span>Parity <span class="token operator">=</span> Parity<span class="token punctuation">.</span>None<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="8"></td><td><pre>sp<span class="token punctuation">.</span>StopBits <span class="token operator">=</span> StopBits<span class="token punctuation">.</span>One<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="9"></td><td><pre>sp<span class="token punctuation">.</span>ReceivedBytesThreshold <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="10"></td><td><pre>sp<span class="token punctuation">.</span>DataReceived <span class="token operator">+=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">SerialDataReceivedEventHandler</span><span class="token punctuation">(</span>Serial_Received<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="11"></td><td><pre>sp<span class="token punctuation">.</span><span class="token function">Open</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr></table></figure><details class="info"><summary>关于SerialPort各个结点函数的解释</summary><div>
+<p><code>SerialPort()</code> : 初始化 <code>SerialPort</code>  类的新实例。<br />
+ <code>PortName</code> : 获取设置通信端口，包括但不限于所有可用的 <code>COM</code>  端口。<br />
+ <code>BaudRate</code> : 获取或设置串行波特率。波特率数值越大，代表其传输速率越快。但是波特率并不是越高越好，一般情况下，波特率越高，其传播距离越短。对于使用何种波特率需要结合实际项目来分析选择。<br />
+ <code>DataBits</code> ：获取或设置每个字节的标准数据位长度。一般来说，数据位越小，代表传播频率越高，传播内容更多。一般情况下我们选择 <code>8</code>  位。 <code>ASCII</code>  协议下可以选择 <code>7</code>  位。<br />
+ <code>Parity</code> ：获取或设置奇偶校验检查协议。奇偶校验用于确认数据传输的准确性。本次选择了在 <code>Modbus</code>  协议中的 <code>CRC校验</code> ，所以选择关闭奇偶校验。<br />
+ <code>StopBits</code> : 获取或设置每个字节的标准停止位数。<br />
+ <code>ReceivedBytesThreshold</code> : 获取或设置 <code>DataReceived</code>  事件发生前内部输入缓冲区中的字节数。<br />
+ <code>DataReceived</code> : 指示已通过由 <code>SerialPort</code>  对象表示的端口接收了数据。<br />
+ <code>Open()</code> : 打开一个新的串行端口连接。<br />
+ <code>Close()</code> ：关闭端口连接，将 <code>IsOpen</code>  属性设置为 <code>false</code> ，并释放内部 <code>Stream</code>  对象。</p>
+<div class="note info">
+<p>每个串口只能打开一次，若要再次调用串口时需要关闭已经打开的串口。</p>
+</div>
+</div></details>
+<p>其中，如果想要简化串口赋值的步骤，可以通过以下构造函数来初始化。</p>
+<figure class="highlight csharp"><figcaption data-lang="C#"><span>简化写法</span></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token class-name">SerialPort</span> sp <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">SerialPort</span><span class="token punctuation">(</span>String<span class="token punctuation">,</span> Int32<span class="token punctuation">,</span> Parity<span class="token punctuation">,</span> Int32<span class="token punctuation">,</span> StopBits<span class="token punctuation">)</span>；</pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token comment">// 使用指定的端口名、波特率、奇偶校验位、数据位和停止位初始化 SerialPort 类的新实例。</span></pre></td></tr></table></figure><h1 id="检查串口"><a class="anchor" href="#检查串口">#</a> 检查串口</h1>
+<p>在程序开始运行前，我们需要判断串口是否可以使用或是否被占用，以此我们可以使用以下代码。</p>
+<figure class="highlight csharp"><figcaption data-lang="C#"><span>判断串口</span></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">bool</span></span> <span class="token function">IsPortOpen</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span></span> armport<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="3"></td><td><pre>  <span class="token class-name"><span class="token keyword">bool</span></span> _open <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="4"></td><td><pre>  <span class="token class-name"><span class="token keyword">bool</span></span> _availavle <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="5"></td><td><pre>  <span class="token class-name">SerialPort</span> _tempPort<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="6"></td><td><pre>  <span class="token class-name"><span class="token keyword">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> Portname <span class="token operator">=</span> SerialPort<span class="token punctuation">.</span><span class="token function">GetPortNames</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="7"></td><td><pre>  <span class="token comment">// 获取所有已经打开的串口名称</span></pre></td></tr><tr><td data-num="8"></td><td><pre></pre></td></tr><tr><td data-num="9"></td><td><pre>  <span class="token comment">// 遍历所有已经打开的串口名称，并给出反馈是我们所期望的串口是否已经打开</span></pre></td></tr><tr><td data-num="10"></td><td><pre>  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">int</span></span> ipn <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> ipn <span class="token operator">&lt;</span> Portname<span class="token punctuation">.</span>Length<span class="token punctuation">;</span> ipn<span class="token operator">++</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="11"></td><td><pre>  <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="12"></td><td><pre>    <span class="token keyword">if</span> <span class="token punctuation">(</span>Portname<span class="token punctuation">[</span>ipn<span class="token punctuation">]</span> <span class="token operator">==</span> armport <span class="token punctuation">)</span></pre></td></tr><tr><td data-num="13"></td><td><pre>    <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="14"></td><td><pre>      _open <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="15"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="16"></td><td><pre>  <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="17"></td><td><pre></pre></td></tr><tr><td data-num="18"></td><td><pre>  <span class="token comment">// 判断串口状态</span></pre></td></tr><tr><td data-num="19"></td><td><pre>  <span class="token keyword">if</span> <span class="token punctuation">(</span>_open<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="20"></td><td><pre>  <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="21"></td><td><pre>    <span class="token keyword">try</span></pre></td></tr><tr><td data-num="22"></td><td><pre>    <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="23"></td><td><pre>      _tempPort <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">SerialPort</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="24"></td><td><pre>      _tempPort<span class="token punctuation">.</span>PortName <span class="token operator">=</span> armport<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="25"></td><td><pre>      _tempPort<span class="token punctuation">.</span><span class="token function">Open</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="26"></td><td><pre>      </pre></td></tr><tr><td data-num="27"></td><td><pre>      <span class="token keyword">if</span> <span class="token punctuation">(</span>_tempPort<span class="token punctuation">.</span>IsOpen<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="28"></td><td><pre>      <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="29"></td><td><pre>        _tempPort<span class="token punctuation">.</span><span class="token function">Close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="30"></td><td><pre>        _availavle <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="31"></td><td><pre>      <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="32"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="33"></td><td><pre>    <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="34"></td><td><pre>    <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="35"></td><td><pre>      _availavle <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="36"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="37"></td><td><pre>  <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="38"></td><td><pre>  <span class="token keyword">else</span></pre></td></tr><tr><td data-num="39"></td><td><pre>  <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="40"></td><td><pre>    _availavle <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="41"></td><td><pre>  <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="42"></td><td><pre>  </pre></td></tr><tr><td data-num="43"></td><td><pre>  <span class="token comment">// 返回 bool 变量，是否可以使用该串口</span></pre></td></tr><tr><td data-num="44"></td><td><pre>  <span class="token keyword">return</span> _availavle<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="45"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><h1 id="创建串口接收事件"><a class="anchor" href="#创建串口接收事件">#</a> 创建串口接收事件</h1>
+<p>在上文中我并未对 <code>Serial_Received</code>  函数进行解释。因为这是用户自定义的函数接收事件。代码如下</p>
+<figure class="highlight csharp"><figcaption data-lang="C#"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">private</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Serial_Received</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">object</span></span> sender<span class="token punctuation">,</span> <span class="token class-name">SerialDataReceivedEventArgs</span> e<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="3"></td><td><pre>   <span class="token keyword">while</span> <span class="token punctuation">(</span>sp<span class="token punctuation">.</span>BytesToRead <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="4"></td><td><pre>   <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="5"></td><td><pre>    recrep <span class="token operator">+=</span> sp<span class="token punctuation">.</span><span class="token function">ReadByte</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ToString</span><span class="token punctuation">(</span><span class="token string">"X2"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ToUpper</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">" "</span><span class="token punctuation">;</span>           </pre></td></tr><tr><td data-num="6"></td><td><pre>    <span class="token comment">// 数据读取，直到读完缓冲区数据</span></pre></td></tr><tr><td data-num="7"></td><td><pre>   <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure>
   </div>
 
    <footer>
@@ -186,9 +211,9 @@ Urmi0x0 = Urmi = Blog</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2022-10-06 19:45:02" itemprop="dateModified" datetime="2022-10-06T19:45:02+08:00">2022-10-06</time>
+    <time title="修改时间：2022-10-07 01:36:15" itemprop="dateModified" datetime="2022-10-07T01:36:15+08:00">2022-10-07</time>
   </span>
-  <span id="2022/10/06/study-notes/c-sharp/csharp-002/" class="item leancloud_visitors" data-flag-title="C#设置串口初始化" title="阅读次数">
+  <span id="2022/10/06/study-notes/c-sharp/csharp-002/" class="item leancloud_visitors" data-flag-title="使用SerialPort设置串口属性" title="阅读次数">
       <span class="icon">
         <i class="ic i-eye"></i>
       </span>
@@ -207,7 +232,7 @@ Urmi0x0 = Urmi = Blog</title>
   </li>
   <li class="link">
     <strong>本文链接：</strong>
-    <a href="https://urmi0x0.github.io/BP/2022/10/06/study-notes/c-sharp/csharp-002/" title="C#设置串口初始化">https://urmi0x0.github.io/BP/2022/10/06/study-notes/c-sharp/csharp-002/</a>
+    <a href="https://urmi0x0.github.io/BP/2022/10/06/study-notes/c-sharp/csharp-002/" title="使用SerialPort设置串口属性">https://urmi0x0.github.io/BP/2022/10/06/study-notes/c-sharp/csharp-002/</a>
   </li>
   <li class="license">
     <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
@@ -226,7 +251,7 @@ Urmi0x0 = Urmi = Blog</title>
     <div class="item left">
       
 
-  <a href="/BP/2022/10/05/study-notes/c-sharp/csharp-001/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giciundwu5j20zk0m8n9e.jpg" title="ModbusRTU仿真环境搭建">
+  <a href="/BP/2022/10/05/study-notes/c-sharp/csharp-001/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclil3m4ej20zk0m8tn8.jpg" title="ModbusRTU仿真环境搭建">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> C#</span>
   <h3>ModbusRTU仿真环境搭建</h3>
@@ -250,10 +275,11 @@ Urmi0x0 = Urmi = Blog</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E4%B8%B2%E5%8F%A3%E5%B1%9E%E6%80%A7"><span class="toc-number">1.</span> <span class="toc-text"> 设置串口属性</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#serialport-%E4%B8%B2%E5%8F%A3%E5%B1%9E%E6%80%A7%E8%B5%8B%E5%80%BC"><span class="toc-number">1.1.</span> <span class="toc-text">  SerialPort  串口属性赋值</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A3%80%E6%9F%A5%E4%B8%B2%E5%8F%A3"><span class="toc-number">2.</span> <span class="toc-text"> 检查串口</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%B2%E5%8F%A3%E6%8E%A5%E6%94%B6%E4%BA%8B%E4%BB%B6"><span class="toc-number">3.</span> <span class="toc-text"> 创建串口接收事件</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
         <ul>
-          <li><a href="/BP/2022/10/05/study-notes/c-sharp/csharp-001/" rel="bookmark" title="ModbusRTU仿真环境搭建">ModbusRTU仿真环境搭建</a></li><li class="active"><a href="/BP/2022/10/06/study-notes/c-sharp/csharp-002/" rel="bookmark" title="C#设置串口初始化">C#设置串口初始化</a></li>
+          <li><a href="/BP/2022/10/05/study-notes/c-sharp/csharp-001/" rel="bookmark" title="ModbusRTU仿真环境搭建">ModbusRTU仿真环境搭建</a></li><li class="active"><a href="/BP/2022/10/06/study-notes/c-sharp/csharp-002/" rel="bookmark" title="使用SerialPort设置串口属性">使用SerialPort设置串口属性</a></li>
         </ul>
       </div>
       <div class="overview panel" data-title="站点概览">
@@ -323,24 +349,24 @@ Urmi0x0 = Urmi = Blog</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/BP/categories/study-notes/" title="分类于 学习笔记">学习笔记</a>
-<i class="ic i-angle-right"></i>
-<a href="/BP/categories/study-notes/c-sharp/" title="分类于 C#">C#</a>
-</div>
-
-    <span><a href="/BP/2022/10/06/study-notes/c-sharp/csharp-002/" title="C#设置串口初始化">C#设置串口初始化</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
 <a href="/BP/categories/guide/" title="分类于 指北">指北</a>
 <i class="ic i-angle-right"></i>
 <a href="/BP/categories/guide/text/" title="分类于 测试">测试</a>
 </div>
 
     <span><a href="/BP/2022/10/05/guide/text/hello-world/" title="Hello World">Hello World</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/BP/categories/study-notes/" title="分类于 学习笔记">学习笔记</a>
+<i class="ic i-angle-right"></i>
+<a href="/BP/categories/study-notes/c-sharp/" title="分类于 C#">C#</a>
+</div>
+
+    <span><a href="/BP/2022/10/06/study-notes/c-sharp/csharp-002/" title="使用SerialPort设置串口属性">使用SerialPort设置串口属性</a></span>
   </li>
 
       
@@ -377,13 +403,13 @@ Urmi0x0 = Urmi = Blog</title>
     <span class="post-meta-item-icon">
       <i class="ic i-chart-area"></i>
     </span>
-    <span title="站点总字数">2k 字</span>
+    <span title="站点总字数">4k 字</span>
 
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="ic i-coffee"></i>
     </span>
-    <span title="站点阅读时长">2 分钟</span>
+    <span title="站点阅读时长">3 分钟</span>
   </div>
   <div class="powered-by">
     基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>

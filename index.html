@@ -89,12 +89,12 @@
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipew28b65j20zk0m8hdt.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclgi503lj20zk0m8hdt.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicitzannuj20zk0m8b29.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipewr8iypj20zk0m8b29.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicitht3xtj20zk0m8k5v.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicitcxhpij20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipesng5oej20zk0m87d4.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclflwv2aj20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipet4bz0yj20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeybxm1pj20zk0m8niv.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeun65urj20zk0m81ii.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipev1x5e4j20zk0m8b29.jpg"></li>
         </ul>
       </div>
     </header>
@@ -121,7 +121,7 @@
           
 <article class="item">
   <div class="cover">
-    <a href="/BP/2022/10/05/study-notes/c-sharp/csharp-001/" itemprop="url" title="ModbusRTU仿真环境搭建"><img data-src="https://tva2.sinaimg.cn/mw690/6833939bly1giclwuom7cj20zk0m8dvn.jpg"></a>
+    <a href="/BP/2022/10/05/study-notes/c-sharp/csharp-001/" itemprop="url" title="ModbusRTU仿真环境搭建"><img data-src="https://tva2.sinaimg.cn/mw690/6833939bly1giclfdu6exj20zk0m87hw.jpg"></a>
   </div>
   <div class="info">
     
@@ -206,8 +206,8 @@ Modbus Poll...
     <div class="ribbon"><a href="/BP/categories/study-notes/c-sharp/" itemprop="url" title="C#">C#</a></div>
     <div class="inner">
         <ul class="posts">
-            <li><a title="C#设置串口初始化" href="/BP/2022/10/06/study-notes/c-sharp/csharp-002/">C#设置串口初始化</a></li>
             <li><a title="ModbusRTU仿真环境搭建" href="/BP/2022/10/05/study-notes/c-sharp/csharp-001/">ModbusRTU仿真环境搭建</a></li>
+            <li><a title="使用SerialPort设置串口属性" href="/BP/2022/10/06/study-notes/c-sharp/csharp-002/">使用SerialPort设置串口属性</a></li>
         </ul>
         <div class="meta footer">
           <span>
@@ -228,7 +228,7 @@ Modbus Poll...
         
 <article class="item">
   <div class="cover">
-    <a href="/BP/2022/10/06/study-notes/c-sharp/csharp-002/" itemprop="url" title="C#设置串口初始化"><img data-src="https://tva2.sinaimg.cn/mw690/6833939bly1giclga70tsj20zk0m84mr.jpg"></a>
+    <a href="/BP/2022/10/06/study-notes/c-sharp/csharp-002/" itemprop="url" title="使用SerialPort设置串口属性"><img data-src="https://tva2.sinaimg.cn/mw690/6833939bly1giclh0m9pdj20zk0m8hdt.jpg"></a>
   </div>
   <div class="info">
     
@@ -243,36 +243,41 @@ Modbus Poll...
     <span class="icon">
       <i class="ic i-pen"></i>
     </span>
-    <span>85</span>
+    <span>2.2k</span>
     <span class="text">字</span>
   </span>
   <span class="item" title="阅读时长">
     <span class="icon">
       <i class="ic i-clock"></i>
     </span>
-    <span>1 分钟</span>
+    <span>2 分钟</span>
   </span>
 </div>
 
-    <h3><a href="/BP/2022/10/06/study-notes/c-sharp/csharp-002/" itemprop="url" title="C#设置串口初始化">C#设置串口初始化</a></h3>
+    <h3><a href="/BP/2022/10/06/study-notes/c-sharp/csharp-002/" itemprop="url" title="使用SerialPort设置串口属性">使用SerialPort设置串口属性</a></h3>
     <div class="excerpt">
         本文仅用于记录本人学习中所遇到的问题和知识加以记录总结，不保证所记录的是最优解，仅作为抛砖引玉，如有不足和纰漏欢迎指正。
 
 本文所涉及软件资源均来源网络，如有侵权请联系站主。
+
+从 .NET Framework 2.0 开始，微软就默认提供了 System.IO.Ports.SerialPort 类，根据 SerialPort 类提供的简单操作步骤，可以很容易的完成串口的信息收发程序，从特定的串口中接收到数据也可以进行数据的发送。
+参考链接：SerialPort
+# 设置串口属性
+关于 SerialPort...
     </div>
     <div class="meta footer">
       <span>
         <a href="/BP/categories/study-notes/c-sharp/" itemprop="url" title="C#"><i class="ic i-flag"></i>C#</a>
       </span>
     </div>
-    <a href="/BP/2022/10/06/study-notes/c-sharp/csharp-002/" itemprop="url" title="C#设置串口初始化" class="btn">more...</a>
+    <a href="/BP/2022/10/06/study-notes/c-sharp/csharp-002/" itemprop="url" title="使用SerialPort设置串口属性" class="btn">more...</a>
   </div>
 </article>
 
         
 <article class="item">
   <div class="cover">
-    <a href="/BP/2022/10/05/guide/text/hello-world/" itemprop="url" title="Hello World"><img data-src="https://tva2.sinaimg.cn/mw690/6833939bly1gipew8gmvyj20zk0m87wh.jpg"></a>
+    <a href="/BP/2022/10/05/guide/text/hello-world/" itemprop="url" title="Hello World"><img data-src="https://tva2.sinaimg.cn/mw690/6833939bly1gipetv6p75j20zk0m8x6p.jpg"></a>
   </div>
   <div class="info">
     
@@ -406,7 +411,7 @@ h$...
 <a href="/BP/categories/study-notes/c-sharp/" title="分类于 C#">C#</a>
 </div>
 
-    <span><a href="/BP/2022/10/06/study-notes/c-sharp/csharp-002/" title="C#设置串口初始化">C#设置串口初始化</a></span>
+    <span><a href="/BP/2022/10/05/study-notes/c-sharp/csharp-001/" title="ModbusRTU仿真环境搭建">ModbusRTU仿真环境搭建</a></span>
   </li>
 
       
@@ -418,7 +423,7 @@ h$...
 <a href="/BP/categories/study-notes/c-sharp/" title="分类于 C#">C#</a>
 </div>
 
-    <span><a href="/BP/2022/10/05/study-notes/c-sharp/csharp-001/" title="ModbusRTU仿真环境搭建">ModbusRTU仿真环境搭建</a></span>
+    <span><a href="/BP/2022/10/06/study-notes/c-sharp/csharp-002/" title="使用SerialPort设置串口属性">使用SerialPort设置串口属性</a></span>
   </li>
 
       
@@ -455,13 +460,13 @@ h$...
     <span class="post-meta-item-icon">
       <i class="ic i-chart-area"></i>
     </span>
-    <span title="站点总字数">2k 字</span>
+    <span title="站点总字数">4k 字</span>
 
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="ic i-coffee"></i>
     </span>
-    <span title="站点阅读时长">2 分钟</span>
+    <span title="站点阅读时长">3 分钟</span>
   </div>
   <div class="powered-by">
     基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>

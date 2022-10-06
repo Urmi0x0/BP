@@ -115,12 +115,12 @@ Urmi0x0 = Urmi = Blog</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclwrdwyaj20zk0m8are.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicitht3xtj20zk0m8k5v.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicitspjpbj20zk0m81ky.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclx29mstj20zk0m8hdt.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giph47e9vtj20zk0m8x6l.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicli3sbvtj20zk0m8x6p.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipevgoki5j20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeuibk9fj20zk0m8ay2.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicitzannuj20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicis081o9j20zk0m8dmr.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipewf5l51j20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclhtuo6nj20zk0m8ttm.jpg"></li>
         </ul>
       </div>
     </header>
@@ -175,8 +175,8 @@ Urmi0x0 = Urmi = Blog</title>
 <div class="note info">
 <p>本文所涉及软件资源均来源网络，如有侵权请联系站主。</p>
 </div>
-<p><span class="pink">ModbusRTU</span> 是公开的 Modbus 通讯协议中的⼀种，⼀般以串⼝作为通讯介质来传输标准格式的报⽂，实现主从站之间的数据交互，⼴泛应⽤于⼯业设备的通信中。<br />
-<span class="pink">ModbusRTU</span> 是⼀种⼀对多的通信协议，所有的数据读写请求由主站发送，指定的从站接收到正确的报⽂后，则会被动响应主站的请求，返回对应的响应报⽂。</p>
+<p><code>ModbusRTU</code>  是公开的 Modbus 通讯协议中的⼀种，⼀般以串⼝作为通讯介质来传输标准格式的报⽂，实现主从站之间的数据交互，⼴泛应⽤于⼯业设备的通信中。<br />
+ <code>ModbusRTU</code>  是⼀种⼀对多的通信协议，所有的数据读写请求由主站发送，指定的从站接收到正确的报⽂后，则会被动响应主站的请求，返回对应的响应报⽂。</p>
 <h1 id="仿真环境搭建所需软件"><a class="anchor" href="#仿真环境搭建所需软件">#</a> 仿真环境搭建所需软件</h1>
 <p>搭建 Modbus 仿真环境需要以下软件：</p>
 <p><span class="exturl" data-url="aHR0cHM6Ly93d3cubW9kYnVzdG9vbHMuY29tL21vZGJ1c19wb2xsLmh0bWw=">Modbus Poll</span> 是一款非常受欢迎的 Modbus 主站设备仿真器，可用于测试和调试 Modbus 从站设备。该软件支持 Modbus RTU、ASCII、TCP/IP 等协议模式。</p>
@@ -191,7 +191,7 @@ Urmi0x0 = Urmi = Blog</title>
 <li class="task-list-item"><input type="checkbox" id="cbx_2" checked="true" disabled="true" /><label for="cbx_2"> <span class="blue">虚拟串口 vspd7.2.308.zip</span></label></li>
 <li class="task-list-item"><input type="checkbox" id="cbx_3" checked="true" disabled="true" /><label for="cbx_3"> <span class="blue">虚拟串口 vspdp9.0 破解版.zip</span></label></li>
 </ul>
-<h2 id="modbus-poll-安装步骤"><a class="anchor" href="#modbus-poll-安装步骤">#</a> Modbus Poll 安装步骤</h2>
+<h2 id="modbus-poll-安装步骤"><a class="anchor" href="#modbus-poll-安装步骤">#</a>  <code>Modbus Poll</code>  安装步骤</h2>
 <ol>
 <li>
 <p>解压<span class="blue"> Modbus Poll 9.2.2 Build 1343.zip</span>，根据系统选择对应的安装包，运行主程序，并根据安装向导提示安装好软件。</p>
@@ -206,7 +206,7 @@ Urmi0x0 = Urmi = Blog</title>
 <span class="pink">key:</span> <span class="spoiler" title="你知道得太多了">5A5742575C5D391A17627B6C010350</span></li>
 </ol>
 <p><img data-src="https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBcWVCVDVpaHBLTGxuaEhLQ3VtZFdWMEstcExHP2U9azJGWmhj.jpg" alt="" title="软件注册界面" height="295px" width="350px" /></p>
-<h2 id="modbus-slave-安装步骤"><a class="anchor" href="#modbus-slave-安装步骤">#</a> Modbus Slave 安装步骤</h2>
+<h2 id="modbus-slave-安装步骤"><a class="anchor" href="#modbus-slave-安装步骤">#</a>  <code>Modbus Slave</code>  安装步骤</h2>
 <ol>
 <li>
 <p>解压<span class="blue"> Modbus Slave 7.3.0.1402 x64.zip</span>，运行主程序，并根据安装向导提示安装好软件。</p>
@@ -221,7 +221,7 @@ Urmi0x0 = Urmi = Blog</title>
 <span class="pink">key:</span> <span class="spoiler" title="你知道得太多了">54554154514756666A655A187D545E505C454F</span></li>
 </ol>
 <p><img data-src="https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBcWVCVDVpaHBLTGxuaExMTXMzTzdzZmFtTFRrP2U9ekJTWDBn.jpg" alt="" title="软件注册界面" height="295px" width="302px" /></p>
-<h2 id="virtual-serial-port-driver-安装步骤"><a class="anchor" href="#virtual-serial-port-driver-安装步骤">#</a> Virtual Serial Port Driver 安装步骤</h2>
+<h2 id="virtual-serial-port-driver-安装步骤"><a class="anchor" href="#virtual-serial-port-driver-安装步骤">#</a>  <code>Virtual Serial Port Driver</code>  安装步骤</h2>
 <p>本安装包中提供了<span class="blue"> vspd7.2</span> 和<span class="blue"> vspd9.0</span> 两个版本，本文以<span class="blue"> vspd9.0</span> 版本为例子举例。</p>
 <ol>
 <li>
@@ -242,7 +242,7 @@ Urmi0x0 = Urmi = Blog</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2022-10-06 19:43:15" itemprop="dateModified" datetime="2022-10-06T19:43:15+08:00">2022-10-06</time>
+    <time title="修改时间：2022-10-06 22:09:14" itemprop="dateModified" datetime="2022-10-06T22:09:14+08:00">2022-10-06</time>
   </span>
   <span id="2022/10/05/study-notes/c-sharp/csharp-001/" class="item leancloud_visitors" data-flag-title="ModbusRTU仿真环境搭建" title="阅读次数">
       <span class="icon">
@@ -282,7 +282,7 @@ Urmi0x0 = Urmi = Blog</title>
     <div class="item left">
       
 
-  <a href="/BP/2022/10/05/guide/text/hello-world/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicis3attqj20zk0m8k7l.jpg" title="Hello World">
+  <a href="/BP/2022/10/05/guide/text/hello-world/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipetv6p75j20zk0m8x6p.jpg" title="Hello World">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> 测试</span>
   <h3>Hello World</h3>
@@ -292,10 +292,10 @@ Urmi0x0 = Urmi = Blog</title>
     <div class="item right">
       
 
-  <a href="/BP/2022/10/06/study-notes/c-sharp/csharp-002/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicli9lfebj20zk0m84qp.jpg" title="C#设置串口初始化">
+  <a href="/BP/2022/10/06/study-notes/c-sharp/csharp-002/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipexbei4hj20zk0m8npd.jpg" title="使用SerialPort设置串口属性">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> C#</span>
-  <h3>C#设置串口初始化</h3>
+  <h3>使用SerialPort设置串口属性</h3>
   </a>
 
     </div>
@@ -314,11 +314,11 @@ Urmi0x0 = Urmi = Blog</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%BF%E7%9C%9F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E6%89%80%E9%9C%80%E8%BD%AF%E4%BB%B6"><span class="toc-number">1.</span> <span class="toc-text"> 仿真环境搭建所需软件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%BF%E7%9C%9F%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4"><span class="toc-number">2.</span> <span class="toc-text"> 仿真软件安装步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#modbus-poll-%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4"><span class="toc-number">2.1.</span> <span class="toc-text"> Modbus Poll 安装步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#modbus-slave-%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4"><span class="toc-number">2.2.</span> <span class="toc-text"> Modbus Slave 安装步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#virtual-serial-port-driver-%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4"><span class="toc-number">2.3.</span> <span class="toc-text"> Virtual Serial Port Driver 安装步骤</span></a></li></ol></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%BF%E7%9C%9F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E6%89%80%E9%9C%80%E8%BD%AF%E4%BB%B6"><span class="toc-number">1.</span> <span class="toc-text"> 仿真环境搭建所需软件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%BF%E7%9C%9F%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4"><span class="toc-number">2.</span> <span class="toc-text"> 仿真软件安装步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#modbus-poll-%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4"><span class="toc-number">2.1.</span> <span class="toc-text">  Modbus Poll  安装步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#modbus-slave-%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4"><span class="toc-number">2.2.</span> <span class="toc-text">  Modbus Slave  安装步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#virtual-serial-port-driver-%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4"><span class="toc-number">2.3.</span> <span class="toc-text">  Virtual Serial Port Driver  安装步骤</span></a></li></ol></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
         <ul>
-          <li class="active"><a href="/BP/2022/10/05/study-notes/c-sharp/csharp-001/" rel="bookmark" title="ModbusRTU仿真环境搭建">ModbusRTU仿真环境搭建</a></li><li><a href="/BP/2022/10/06/study-notes/c-sharp/csharp-002/" rel="bookmark" title="C#设置串口初始化">C#设置串口初始化</a></li>
+          <li class="active"><a href="/BP/2022/10/05/study-notes/c-sharp/csharp-001/" rel="bookmark" title="ModbusRTU仿真环境搭建">ModbusRTU仿真环境搭建</a></li><li><a href="/BP/2022/10/06/study-notes/c-sharp/csharp-002/" rel="bookmark" title="使用SerialPort设置串口属性">使用SerialPort设置串口属性</a></li>
         </ul>
       </div>
       <div class="overview panel" data-title="站点概览">
@@ -407,7 +407,7 @@ Urmi0x0 = Urmi = Blog</title>
 <a href="/BP/categories/study-notes/c-sharp/" title="分类于 C#">C#</a>
 </div>
 
-    <span><a href="/BP/2022/10/06/study-notes/c-sharp/csharp-002/" title="C#设置串口初始化">C#设置串口初始化</a></span>
+    <span><a href="/BP/2022/10/06/study-notes/c-sharp/csharp-002/" title="使用SerialPort设置串口属性">使用SerialPort设置串口属性</a></span>
   </li>
 
       
@@ -444,13 +444,13 @@ Urmi0x0 = Urmi = Blog</title>
     <span class="post-meta-item-icon">
       <i class="ic i-chart-area"></i>
     </span>
-    <span title="站点总字数">2k 字</span>
+    <span title="站点总字数">4k 字</span>
 
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="ic i-coffee"></i>
     </span>
-    <span title="站点阅读时长">2 分钟</span>
+    <span title="站点阅读时长">3 分钟</span>
   </div>
   <div class="powered-by">
     基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
