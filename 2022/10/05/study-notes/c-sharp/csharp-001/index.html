@@ -74,7 +74,7 @@ Urmi0x0 = Urmi = Blog</title>
       <i class="ic i-pen"></i>
     </span>
     <span class="text">本文字数</span>
-    <span>1.3k</span>
+    <span>1.7k</span>
     <span class="text">字</span>
   </span>
   <span class="item" title="阅读时长">
@@ -82,7 +82,7 @@ Urmi0x0 = Urmi = Blog</title>
       <i class="ic i-clock"></i>
     </span>
     <span class="text">阅读时长</span>
-    <span>1 分钟</span>
+    <span>2 分钟</span>
   </span>
 </div>
 
@@ -115,12 +115,12 @@ Urmi0x0 = Urmi = Blog</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giph4fomxoj20zk0m8axp.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclxp31goj20zk0m8qv5.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipexw3o58j20zk0m8e81.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicm0fdw5cj20zk0m8hdt.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giciukx8a7j20zk0m8aio.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclhpw3lwj20zk0m8gvw.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipexe4oykj20zk0m87ji.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipewkhf1zj20zk0m81kx.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipetlbztpj20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giph4lm9i7j20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giciszlczyj20zk0m816d.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclgi503lj20zk0m8hdt.jpg"></li>
         </ul>
       </div>
     </header>
@@ -169,66 +169,48 @@ Urmi0x0 = Urmi = Blog</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <div class="note info">
-<p>本文仅用于记录本人学习中所遇到的问题和知识加以记录总结，不保证所记录的是最优解，仅作为抛砖引玉，如有不足和纰漏欢迎指正。</p>
-</div>
-<div class="note info">
-<p>本文所涉及软件资源均来源网络，如有侵权请联系站主。</p>
-</div>
-<p><span class="pink">ModbusRTU</span> 是公开的 Modbus 通讯协议中的⼀种，⼀般以串⼝作为通讯介质来传输标准格式的报⽂，实现主从站之间的数据交互，⼴泛应⽤于⼯业设备的通信中。<br />
-<span class="pink">ModbusRTU</span> 是⼀种⼀对多的通信协议，所有的数据读写请求由主站发送，指定的从站接收到正确的报⽂后，则会被动响应主站的请求，返回对应的响应报⽂。</p>
-<h1 id="仿真环境搭建所需软件"><a class="anchor" href="#仿真环境搭建所需软件">#</a> 仿真环境搭建所需软件</h1>
-<p>搭建 Modbus 仿真环境需要以下软件：</p>
-<p><span class="exturl" data-url="aHR0cHM6Ly93d3cubW9kYnVzdG9vbHMuY29tL21vZGJ1c19wb2xsLmh0bWw=">Modbus Poll</span> 是一款非常受欢迎的 Modbus 主站设备仿真器，可用于测试和调试 Modbus 从站设备。该软件支持 Modbus RTU、ASCII、TCP/IP 等协议模式。</p>
-<p><span class="exturl" data-url="aHR0cHM6Ly93d3cubW9kYnVzdG9vbHMuY29tL21vZGJ1c19zbGF2ZS5odG1s">Modbus Slave</span> Modbus 从设备仿真器，可以仿真 32 个从设备 / 地址域。每个接口都提供了对 EXCEL 报表的 OLE 自动化支持。</p>
-<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuZWx0aW1hLmNvbS9jbi9wcm9kdWN0cy92c3BkeHAv">Virtual Serial Port Driver</span> 可以在一个电脑上虚拟出两个 com 端口，并透过虚拟调制解调器电缆成对连接。双方的应用程序将能够以这种方式交换数据，所有写入第一个端口的数据将显示在第二个端口一次又一次。</p>
+    <p>:::info<br>本文仅用于记录本人学习中所遇到的问题和知识加以记录总结，不保证所记录的是最优解，仅作为抛砖引玉，如有不足和纰漏欢迎指正。<br>:::</p>
+<p>:::info<br>本文所涉及软件资源均来源网络，如有侵权请联系站主。<br>:::</p>
+<p>[ModbusRTU]{.pink}是公开的Modbus通讯协议中的⼀种，⼀般以串⼝作为通讯介质来传输标准格式的报⽂，实现主从站之间的数据交互，⼴泛应⽤于⼯业设备的通信中。<br>[ModbusRTU]{.pink}是⼀种⼀对多的通信协议，所有的数据读写请求由主站发送，指定的从站接收到正确的报⽂后，则会被动响应主站的请求，返回对应的响应报⽂。</p>
+<h1 id="仿真环境搭建所需软件"><a href="#仿真环境搭建所需软件" class="headerlink" title="仿真环境搭建所需软件"></a>仿真环境搭建所需软件</h1><p>搭建Modbus仿真环境需要以下软件：</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cubW9kYnVzdG9vbHMuY29tL21vZGJ1c19wb2xsLmh0bWw=">Modbus Poll</span>是一款非常受欢迎的Modbus主站设备仿真器，可用于测试和调试Modbus从站设备。该软件支持Modbus RTU、ASCII、TCP&#x2F;IP等协议模式。</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cubW9kYnVzdG9vbHMuY29tL21vZGJ1c19zbGF2ZS5odG1s">Modbus Slave</span> Modbus从设备仿真器，可以仿真32个从设备&#x2F;地址域。每个接口都提供了对EXCEL报表的OLE自动化支持。</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuZWx0aW1hLmNvbS9jbi9wcm9kdWN0cy92c3BkeHAv">Virtual Serial Port Driver</span>可以在一个电脑上虚拟出两个com端口，并透过虚拟调制解调器电缆成对连接。双方的应用程序将能够以这种方式交换数据，所有写入第一个端口的数据将显示在第二个端口一次又一次。</p>
 <p>下载链接：<span class="exturl" data-url="aHR0cHM6Ly9wYW4uYmFpZHUuY29tL3MvMU5pYlBSV3JzREVDUHM5YjBRWDlRbHc/cHdkPWF1czg=">百度网盘</span></p>
-<h1 id="仿真软件安装步骤"><a class="anchor" href="#仿真软件安装步骤">#</a> 仿真软件安装步骤</h1>
-<p class="primary">解压<span class="blue"> Modbus 调试工具软件套装.rar</span>，其中包括了：</p>
-<ul class="task-list">
-<li class="task-list-item"><input type="checkbox" id="cbx_0" checked="true" disabled="true" /><label for="cbx_0"> <span class="blue">Modbus Poll 9.2.2 Build 1343.zip</span></label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_1" checked="true" disabled="true" /><label for="cbx_1"> <span class="blue">Modbus Slave 7.3.0.1402 x64.zip</span></label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_2" checked="true" disabled="true" /><label for="cbx_2"> <span class="blue">虚拟串口 vspd7.2.308.zip</span></label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_3" checked="true" disabled="true" /><label for="cbx_3"> <span class="blue">虚拟串口 vspdp9.0 破解版.zip</span></label></li>
+<h1 id="仿真软件安装步骤"><a href="#仿真软件安装步骤" class="headerlink" title="仿真软件安装步骤"></a>仿真软件安装步骤</h1><p>解压[Modbus调试工具软件套装.rar]{.blue}，其中包括了：<br>{.primary}</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> [Modbus Poll 9.2.2 Build 1343.zip]{.blue}</li>
+<li><input checked="" disabled="" type="checkbox"> [Modbus Slave 7.3.0.1402 x64.zip]{.blue}</li>
+<li><input checked="" disabled="" type="checkbox"> [虚拟串口vspd7.2.308.zip]{.blue}</li>
+<li><input checked="" disabled="" type="checkbox"> [虚拟串口vspdp9.0破解版.zip]{.blue}</li>
 </ul>
-<h2 id="modbus-poll-安装步骤"><a class="anchor" href="#modbus-poll-安装步骤">#</a> Modbus Poll 安装步骤</h2>
-<ol>
-<li>
-<p>解压<span class="blue"> Modbus Poll 9.2.2 Build 1343.zip</span>，根据系统选择对应的安装包，运行主程序，并根据安装向导提示安装好软件。</p>
+<h2 id="Modbus-Poll-安装步骤"><a href="#Modbus-Poll-安装步骤" class="headerlink" title="Modbus Poll 安装步骤"></a>Modbus Poll 安装步骤</h2><ol>
+<li><p>解压[Modbus Poll 9.2.2 Build 1343.zip]{.blue}，根据系统选择对应的安装包，运行主程序，并根据安装向导提示安装好软件。</p>
 </li>
-<li>
-<p>软件安装成功后，在桌面运行打开软件，进入主界面点击<span class="green"> Connection</span>，选择<span class="green"> Connect...</span>，弹出软件注册界面。</p>
+<li><p>软件安装成功后，在桌面运行打开软件，进入主界面点击[Connection]{.green}，选择[Connect…]{.green}，弹出软件注册界面。</p>
 </li>
 </ol>
-<p><img data-src="https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBcWVCVDVpaHBLTGxuaFNOUlJ1LXJ0SThrVWs1P2U9U0h6OGRU.jpg" alt="" title="软件注册界面" height="295px" width="350px" /></p>
+<p><img data-src="https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBcWVCVDVpaHBLTGxuaFNOUlJ1LXJ0SThrVWs1P2U9U0h6OGRU.jpg" title="软件注册界面">{height&#x3D;”295px” width&#x3D;”350px”}</p>
 <ol start="3">
-<li>打开安装包中的<span class="blue"> key.text</span> 文件，将文本内注册码复制到软件注册界面需要填写注册码方框中，然后点击<span class="green"> OK</span> 即可激活软件。<br />
-<span class="pink">key:</span> <span class="spoiler" title="你知道得太多了">5A5742575C5D391A17627B6C010350</span></li>
+<li>打开安装包中的[key.text]{.blue}文件，将文本内注册码复制到软件注册界面需要填写注册码方框中，然后点击[OK]{.green}即可激活软件。<br>[key:]{.pink} !!5A5742575C5D391A17627B6C010350!!</li>
 </ol>
-<p><img data-src="https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBcWVCVDVpaHBLTGxuaEhLQ3VtZFdWMEstcExHP2U9azJGWmhj.jpg" alt="" title="软件注册界面" height="295px" width="350px" /></p>
-<h2 id="modbus-slave-安装步骤"><a class="anchor" href="#modbus-slave-安装步骤">#</a> Modbus Slave 安装步骤</h2>
-<ol>
-<li>
-<p>解压<span class="blue"> Modbus Slave 7.3.0.1402 x64.zip</span>，运行主程序，并根据安装向导提示安装好软件。</p>
+<p><img data-src="https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBcWVCVDVpaHBLTGxuaEhLQ3VtZFdWMEstcExHP2U9azJGWmhj.jpg" title="软件注册界面">{height&#x3D;”295px” width&#x3D;”350px”}</p>
+<h2 id="Modbus-Slave-安装步骤"><a href="#Modbus-Slave-安装步骤" class="headerlink" title="Modbus Slave 安装步骤"></a>Modbus Slave 安装步骤</h2><ol>
+<li><p>解压[Modbus Slave 7.3.0.1402 x64.zip]{.blue}，运行主程序，并根据安装向导提示安装好软件。</p>
 </li>
-<li>
-<p>软件安装成功后，在桌面运行打开软件，进入主界面点击<span class="green"> Connection</span>，选择<span class="green"> Connect...</span>，弹出软件注册界面。</p>
+<li><p>软件安装成功后，在桌面运行打开软件，进入主界面点击[Connection]{.green}，选择[Connect…]{.green}，弹出软件注册界面。</p>
 </li>
 </ol>
-<p><img data-src="https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBcWVCVDVpaHBLTGxuaE9HekVfZGtQYkljSmluP2U9N0tKZkxv.jpg" alt="" title="软件注册界面" height="295px" width="302px" /></p>
+<p><img data-src="https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBcWVCVDVpaHBLTGxuaE9HekVfZGtQYkljSmluP2U9N0tKZkxv.jpg" title="软件注册界面">{height&#x3D;”295px” width&#x3D;”302px”}</p>
 <ol start="3">
-<li>打开安装包中的<span class="blue"> key.text</span> 文件，将文本内注册码复制到软件注册界面需要填写注册码方框中，然后点击<span class="green"> OK</span> 即可激活软件。<br />
-<span class="pink">key:</span> <span class="spoiler" title="你知道得太多了">54554154514756666A655A187D545E505C454F</span></li>
+<li>打开安装包中的[key.text]{.blue}文件，将文本内注册码复制到软件注册界面需要填写注册码方框中，然后点击[OK]{.green}即可激活软件。<br>[key:]{.pink} !!54554154514756666A655A187D545E505C454F!!</li>
 </ol>
-<p><img data-src="https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBcWVCVDVpaHBLTGxuaExMTXMzTzdzZmFtTFRrP2U9ekJTWDBn.jpg" alt="" title="软件注册界面" height="295px" width="302px" /></p>
-<h2 id="virtual-serial-port-driver-安装步骤"><a class="anchor" href="#virtual-serial-port-driver-安装步骤">#</a> Virtual Serial Port Driver 安装步骤</h2>
-<p>本安装包中提供了<span class="blue"> vspd7.2</span> 和<span class="blue"> vspd9.0</span> 两个版本，本文以<span class="blue"> vspd9.0</span> 版本为例子举例。</p>
+<p><img data-src="https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBcWVCVDVpaHBLTGxuaExMTXMzTzdzZmFtTFRrP2U9ekJTWDBn.jpg" title="软件注册界面">{height&#x3D;”295px” width&#x3D;”302px”}</p>
+<h2 id="Virtual-Serial-Port-Driver-安装步骤"><a href="#Virtual-Serial-Port-Driver-安装步骤" class="headerlink" title="Virtual Serial Port Driver 安装步骤"></a>Virtual Serial Port Driver 安装步骤</h2><p>本安装包中提供了[vspd7.2]{.blue}和[vspd9.0]{.blue}两个版本，本文以[vspd9.0]{.blue}版本为例子举例。</p>
 <ol>
-<li>
-<p>解压<span class="blue">虚拟串口 vspdp9.0 破解版.zip</span>，运行主程序<span class="blue"> vspdpro 原版.exe</span>，并根据安装向导提示安装好软件。</p>
+<li><p>解压[虚拟串口vspdp9.0破解版.zip]{.blue}，运行主程序[vspdpro原版.exe]{.blue}，并根据安装向导提示安装好软件。</p>
 </li>
-<li>
-<p>打开文件安装目录，将文件目录中的<span class="blue"> vspdpro.exe</span> 替换成安装文件包中的<span class="blue"> vspdpro.exe</span>。</p>
+<li><p>打开文件安装目录，将文件目录中的[vspdpro.exe]{.blue}替换成安装文件包中的[vspdpro.exe]{.blue}。</p>
 </li>
 </ol>
 
@@ -282,7 +264,7 @@ Urmi0x0 = Urmi = Blog</title>
     <div class="item left">
       
 
-  <a href="/BP/2022/10/05/guide/text/hello-world/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giph47e9vtj20zk0m8x6l.jpg" title="Hello World">
+  <a href="/BP/2022/10/05/guide/text/hello-world/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclg5ms2rj20zk0m8u0x.jpg" title="Hello World">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> 测试</span>
   <h3>Hello World</h3>
@@ -292,7 +274,7 @@ Urmi0x0 = Urmi = Blog</title>
     <div class="item right">
       
 
-  <a href="/BP/2022/10/06/study-notes/c-sharp/csharp-002/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclwuom7cj20zk0m8dvn.jpg" title="C#设置串口初始化">
+  <a href="/BP/2022/10/06/study-notes/c-sharp/csharp-002/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipex2cdtbj20zk0m8x6p.jpg" title="C#设置串口初始化">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> C#</span>
   <h3>C#设置串口初始化</h3>
@@ -314,7 +296,7 @@ Urmi0x0 = Urmi = Blog</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%BF%E7%9C%9F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E6%89%80%E9%9C%80%E8%BD%AF%E4%BB%B6"><span class="toc-number">1.</span> <span class="toc-text"> 仿真环境搭建所需软件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%BF%E7%9C%9F%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4"><span class="toc-number">2.</span> <span class="toc-text"> 仿真软件安装步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#modbus-poll-%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4"><span class="toc-number">2.1.</span> <span class="toc-text"> Modbus Poll 安装步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#modbus-slave-%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4"><span class="toc-number">2.2.</span> <span class="toc-text"> Modbus Slave 安装步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#virtual-serial-port-driver-%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4"><span class="toc-number">2.3.</span> <span class="toc-text"> Virtual Serial Port Driver 安装步骤</span></a></li></ol></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%BF%E7%9C%9F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E6%89%80%E9%9C%80%E8%BD%AF%E4%BB%B6"><span class="toc-number">1.</span> <span class="toc-text">仿真环境搭建所需软件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%BF%E7%9C%9F%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4"><span class="toc-number">2.</span> <span class="toc-text">仿真软件安装步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Modbus-Poll-%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4"><span class="toc-number">2.1.</span> <span class="toc-text">Modbus Poll 安装步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Modbus-Slave-%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4"><span class="toc-number">2.2.</span> <span class="toc-text">Modbus Slave 安装步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Virtual-Serial-Port-Driver-%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4"><span class="toc-number">2.3.</span> <span class="toc-text">Virtual Serial Port Driver 安装步骤</span></a></li></ol></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
         <ul>
@@ -390,24 +372,24 @@ Urmi0x0 = Urmi = Blog</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/BP/categories/guide/" title="分类于 指北">指北</a>
-<i class="ic i-angle-right"></i>
-<a href="/BP/categories/guide/text/" title="分类于 测试">测试</a>
-</div>
-
-    <span><a href="/BP/2022/10/05/guide/text/hello-world/" title="Hello World">Hello World</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
 <a href="/BP/categories/study-notes/" title="分类于 学习笔记">学习笔记</a>
 <i class="ic i-angle-right"></i>
 <a href="/BP/categories/study-notes/c-sharp/" title="分类于 C#">C#</a>
 </div>
 
     <span><a href="/BP/2022/10/06/study-notes/c-sharp/csharp-002/" title="C#设置串口初始化">C#设置串口初始化</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/BP/categories/guide/" title="分类于 指北">指北</a>
+<i class="ic i-angle-right"></i>
+<a href="/BP/categories/guide/text/" title="分类于 测试">测试</a>
+</div>
+
+    <span><a href="/BP/2022/10/05/guide/text/hello-world/" title="Hello World">Hello World</a></span>
   </li>
 
       
